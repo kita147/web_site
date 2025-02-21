@@ -1,0 +1,226 @@
+@charset "UTF-8";
+/* フォントの導入 -----------------------------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+/* コンテンツ幅以下可変レイアウト -----------------------------------------*/
+html {
+  font-size: 2.5641025641vw;
+  /* 390はSPデザインカンプの幅 */
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 0.8312551953vw;
+    /* 1203はPCカンプのコンテンツ幅 */
+  }
+}
+@media (min-width: 1030px) {
+  html {
+    font-size: 62.5%;
+  }
+}
+/* スムーススクロール -----------------------------------------*/
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 10rem;
+}
+
+/* 変数 -----------------------------------------*/
+/* 全体的な設定 -----------------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans JP", serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.75;
+  background-color: #fff;
+  color: #000;
+}
+
+span,
+th,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  font-weight: normal;
+  line-height: 1;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: bottom;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+ul {
+  padding-left: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* 共通クラス -----------------------------------------*/
+.title__en {
+  font-family: "Montserrat", serif;
+  font-size: 1.6rem;
+  font-size: 600;
+  color: #168352;
+  line-height: 1;
+  margin-bottom: 1.2rem;
+}
+
+.title_jp {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* フォント -----------------------------------------*/
+.montserrat-semi-bold {
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.montserrat-bold {
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* ヘッダーここから -----------------------------------------*/
+.header {
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.header__container {
+  height: 6.3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.6rem;
+}
+
+@media (min-width: 768px) {
+  .header__container {
+    height: 11.4rem;
+    max-width: 120.3rem;
+    margin: 0 auto;
+    padding: 0 1.65rem;
+  }
+}
+/* ロゴマーク */
+.logo {
+  width: 19.7rem;
+}
+
+@media (min-width: 768px) {
+  .logo {
+    width: 26.3rem;
+  }
+}
+/* ハンバーガーメニューの3本線ボタン */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 0.6rem;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+}
+.hamburger__line {
+  width: 2.4rem;
+  height: 2px;
+  background-color: #000;
+}
+
+/* ハンバーガーメニューの3本線ボタンここまで */
+/* ハンバーガーメニューの中ここから */
+.header__nav-sp {
+  position: fixed;
+  top: 6.3rem;
+  right: -100vw;
+  /*width: 100vw;*/
+  width: 35.8rem;
+  text-align: center;
+  padding: 3.2rem;
+  background-color: #168352;
+  border-radius: 2.5rem;
+  z-index: 1000;
+  transition: right 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  .header__nav-sp {
+    display: none;
+  }
+}
+.header__nav-sp.active {
+  /*right: 0;*/
+  right: 1.6rem;
+}
+
+/* ハンバーガーメニューの中ここまで */
+.header__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+  gap: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .header__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    font-size: 1.6rem;
+    color: #000;
+    gap: 4rem;
+  }
+}
+.header__nav-pc {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .header__nav-pc {
+    display: block;
+  }
+}/*# sourceMappingURL=main.css.map */
