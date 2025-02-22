@@ -25,7 +25,7 @@ $breakpoint-lg: $pc-content-width;
 
 // 本番用か否か？本番用の場合は1にする。
 // 0の場合はpxで出力される。パーフェクトピクセルで合わせる時に便利。
-$production: 0;
+$production: 1;
 
 //-----------------------------------------------------
 //  scss: ブレークポイント関数
@@ -370,6 +370,7 @@ a {
 
     @include mq(md) {
         width: px2Rem(525);
+        font-size: px2Rem(15);
     }
 }
 
@@ -386,6 +387,7 @@ a {
     @include mq(md) {
         height: px2Rem(550);
         margin-top: px2Rem(55);
+        border-radius: px2Rem(40)
     }
 }
 
@@ -446,6 +448,10 @@ a {
 
 .about-us__text-second {
     line-break: anywhere;
+
+    @include mq(md) {
+        font-size: px2Rem(15);
+    }    
 }
 
 .about-us__image {
