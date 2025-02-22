@@ -153,14 +153,15 @@ a {
 .top__title--en {
     font-family: "Montserrat", serif;
     font-size: vw(16);
-    font-size: 600;
+    font-weight: 600;
     color: $main-green;
     line-height: 1;
-    margin-bottom: 1.2rem;
+    text-align: center;
+    margin-bottom: vw(7.5);
 
     @include mq(md) {
-        font-size: px2Rem(16);
-        margin-bottom: px2Rem(20);
+        font-size: px2Rem(20);
+        margin-bottom: px2Rem(16);
     }
 }
 
@@ -168,11 +169,31 @@ a {
     font-size: vw(20);
     font-weight: 700;
     line-height: 1;
+    text-align: center;
+    margin-bottom: vw(25);
 
     @include mq(md) {
         font-size: px2Rem(28);
+        margin-bottom: px2Rem(25);
     }
 }
+
+.sp {
+    display: block;
+
+    @include mq(md) {
+        display: none;
+    }
+}
+
+.pc {
+    display: none;
+
+    @include mq(md) {
+        display: block;
+    }
+}
+
 
 /* フォント -----------------------------------------*/
 .montserrat-semi-bold {
@@ -302,8 +323,8 @@ a {
     }
 }
 
-/* 企業コンセプト -----------------------------------------*/
-.concept {
+/* メインビジュアル -----------------------------------------*/
+.main-visual {
     margin-top: vw(63);
 
     @include mq(md) {
@@ -311,36 +332,40 @@ a {
     }
 }
 
-.concept__container {
+.main-visual__container {
+    padding: vw(20) vw(16) vw(55);
+
+    @include mq(md) {
+        max-width: px2Rem(1200);
+        margin: 0 auto;
+        padding: px2Rem(50) px2Rem(16.5) px2Rem(62);
+    }
+}
+
+.main-visual__box {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: vw(25);
     align-items: flex-start;
-    padding: vw(20) vw(16);
 
     @include mq(md) {
-        max-width: px2Rem(1200);
         flex-direction: row;
-        justify-content: space-between;
-        gap: px2Rem(120);
-        margin: 0 auto;
-        padding: px2Rem(50);
+        gap: px2Rem(135);
     }
 }
 
-.concept__title {
+.main-visual__title {
     font-size: vw(28);
     font-weight: 700;
-    /*margin-bottom: vw(26);*/
+    line-height: 1;
 
     @include mq(md) {
         font-size: px2Rem(40);
-        /*margin-bottom: px2Rem(15);*/
     }
 }
 
-.concept__text {
+.main-visual__text {
     line-break: anywhere;
 
     @include mq(md) {
@@ -348,4 +373,92 @@ a {
     }
 }
 
+.main-visual__image {
+    width: 100%;
+    height: vw(450);
+    background-image: url(/assets/image/main_visual.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: vw(40);
+    margin-top: vw(26);
 
+    @include mq(md) {
+        height: px2Rem(550);
+        margin-top: px2Rem(55);
+    }
+}
+
+/* 私たちについて -----------------------------------------*/
+.about-us__bg {
+    width: 100%;
+    background-image: url(/assets/image/bg_about_us.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @include mq(md) {
+        background-image: none;
+    }
+}
+
+.about-us__container {
+    padding: vw(32) vw(16);
+
+    @include mq(md) {
+        max-width: px2Rem(1200);
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: px2Rem(15);
+        margin: 0 auto;
+        padding: px2Rem(8) px2Rem(130) px2Rem(63) px2Rem(110);
+    }
+}
+
+.about-us__text-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: vw(6);
+    background-color: #fff;
+    opacity: 0.8;
+    border-radius: vw(30);
+    padding: vw(15) vw(25) vw(18);
+    line-break: anywhere;
+
+    @include mq(md) {
+        width: px2Rem(405);
+        text-align: left;
+        gap: px2Rem(25);
+        padding: px2Rem(100) 0 0 ;
+    }
+}
+
+.about-us__text-first {
+    font-size: vw(18);
+    font-weight: 700;
+
+    @include mq(md) {
+        font-size: px2Rem(20);
+    }    
+}
+
+.about-us__text-second {
+    line-break: anywhere;
+}
+
+.about-us__image {
+    background-image: none;
+
+    @include mq(md) {
+        display: block;
+        width: px2Rem(390);
+        height: px2Rem(570);
+        background-image: url(/assets/image/bg_about_us.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: px2Rem(40);
+    }
+}
