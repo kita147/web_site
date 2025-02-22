@@ -4,37 +4,97 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 
-/* コンテンツ幅以下可変レイアウト -----------------------------------------*/
-html {
-    font-size: calc(10 * 100vw / 390);
-    /* 390はSPデザインカンプの幅 */
-}
+//-----------------------------------------------------
+// scss: 変数設定
+//-----------------------------------------------------
 
-@media (min-width: 768px) {
-    html {
-        font-size: calc(10 * 100vw / 1203);
-        /* 1203はPCカンプのコンテンツ幅 */
+// カンプ / コンテンツ幅の指定
+$sp-full-width: 390; // スマホ用のカンプ幅
+$pc-full-width: 1400; // PC用のカンプ幅
+$pc-content-width: 1200; // PC用のカンプのコンテンツ幅(ガイド線の幅)
+
+// ブレークポイント設定
+// スマホ:
+//    0px ~ 768px未満 -> スマホ用のカンプをベースにvwで実装
+// タブレット:
+//    768px ~ PCコンテンツ幅未満 -> PC用のカンプをベースにvwで実装。予算の多い案件ではタブレット用のカンプが提供される場合もある。
+// PC:
+//    PCコンテンツ幅以上 -> PC用のカンプをベースにpx(rem)で実装
+$breakpoint-md: 768;
+$breakpoint-lg: $pc-content-width;
+
+// 本番用か否か？本番用の場合は1にする。
+// 0の場合はpxで出力される。パーフェクトピクセルで合わせる時に便利。
+$production: 0;
+
+//-----------------------------------------------------
+//  scss: ブレークポイント関数
+//-----------------------------------------------------
+
+$breakpoints: (
+    "md": "screen and (min-width: #{$breakpoint-md}px)",
+    "lg": "screen and (min-width: #{$breakpoint-lg}px)",
+) !default;
+
+@mixin mq($breakpoint: md) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
     }
 }
 
-@media (min-width: 1030px) {
-    html {
-        font-size: 62.5%;
+//-----------------------------------------------------
+//  scss: 変換関数群
+//-----------------------------------------------------
+
+// SP用: vwへの変換
+@function vw($px) {
+    @if $production !=1 {
+        @return $px * 1px;
     }
+
+    @return calc($px * 100vw / $sp-full-width);
 }
 
-/* スムーススクロール -----------------------------------------*/
-html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 10rem;
+// タブレット用: vwへの変換
+@function vwt($px) {
+    @if $production !=1 {
+        @return $px * 1px;
+    }
+
+    @return calc($px * 100vw / $pc-content-width);
+}
+
+// PC用: pxをremに変換
+@function px2Rem($px) {
+    @if $production !=1 {
+        @return $px * 1px;
+    }
+
+    @return calc($px / 16) * 1rem;
+}
+
+// PC用: pxをvwに変換
+// ヘッダーなどコンテンツ幅ベースではなくかんぷ幅ベースでvwを使いたい場合に使用。
+// あまり使わない。
+@function vwp($px) {
+    @if $production !=1 {
+        @return $px * 1px;
+    }
+
+    @return calc($px * 100vw / $pc-full-width);
 }
 
 /* 変数 -----------------------------------------*/
 $main-green: #168352;
-$contents-width-pc: 120.3rem;
-$pad-pc-small: 1.65rem;
-$pad-pc-large: 5rem;       
-$pad-sp: 1.6rem;
+$pad-pc-small: 16.5px;
+$pad-pc-large: 50px;
+$pad-sp: 16px;
+
+/* スムーススクロール -----------------------------------------*/
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: px2Rem(160);
+}
 
 /* 全体的な設定 -----------------------------------------*/
 * {
@@ -45,7 +105,7 @@ $pad-sp: 1.6rem;
 
 body {
     font-family: "Noto Sans JP", serif;
-    font-size: 1.5rem;
+    font-size: vw(15);
     font-weight: 400;
     font-style: normal;
     line-height: 1.75;
@@ -90,19 +150,28 @@ a {
 }
 
 /* 共通クラス -----------------------------------------*/
-.title__en {
+.top__title--en {
     font-family: "Montserrat", serif;
-    font-size: 1.6rem;
+    font-size: vw(16);
     font-size: 600;
     color: $main-green;
     line-height: 1;
     margin-bottom: 1.2rem;
+
+    @include mq(md) {
+        font-size: px2Rem(16);
+        margin-bottom: px2Rem(20);
+    }
 }
 
-.title_jp {
-    font-size: 2rem;
+.top__title--jp {
+    font-size: vw(20);
     font-weight: 700;
     line-height: 1;
+
+    @include mq(md) {
+        font-size: px2Rem(28);
+    }
 }
 
 /* フォント -----------------------------------------*/
@@ -131,31 +200,26 @@ a {
 }
 
 .header__container {
-    height: 6.3rem;
+    height: vw(63);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 $pad-sp;
-}
 
-@media (min-width: 768px) {
-    .header__container {
-        height: 11.4rem;
-        max-width: $contents-width-pc;
+    @include mq(md) {
+        max-width: px2Rem(1200);
+        height: px2Rem(114);
         margin: 0 auto;
-        padding: 0 $pad-pc-small;
+        padding: $pad-pc-small;
     }
-    
 }
 
 /* ロゴマーク */
 .logo {
-    width: 19.7rem;
-}
+    width: vw(197);
 
-@media (min-width: 768px) {
-    .logo {
-        width: 26.3rem;
+    @include mq(md) {
+        width: px2Rem(263);
     }
 }
 
@@ -165,78 +229,123 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    row-gap: 0.6rem;
+    row-gap: vw(6);
     cursor: pointer;
-}
 
-@media (min-width: 768px) {
-    .hamburger {
+    @include mq(md) {
         display: none;
     }
 }
 
 .hamburger__line {
-    width: 2.4rem;
+    width: vw(24);
     height: 2px;
     background-color: #000;
 }
-/* ハンバーガーメニューの3本線ボタンここまで */
 
-/* ハンバーガーメニューの中ここから */
+/* ハンバーガーメニューの設定ここから */
 .header__nav-sp {
-    position: fixed;
-    top: 6.3rem;
-    right: -100vw;
-    /*width: 100vw;*/
-    width: 35.8rem;
+    position: absolute; /* ヘッダーの中で相対配置 */
+    top: 100%; /* ヘッダーの真下 */
+    left: 50%; /* 左右中央配置 */
+    transform: translateX(-50%) translateY(-10px); /* 初期位置を少し上に */
+    width: vw(358);
     text-align: center;
-    padding: 3.2rem;
+    padding: vw(32);
     background-color: $main-green;
-    border-radius: 2.5rem;
+    border-radius: vw(25);
     z-index: 1000;
-    transition: right 0.3s ease;
-}
 
-@media (min-width: 768px) {
-    .header__nav-sp {
+    /* 初期状態：透明＆非表示 */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+
+    @include mq(md) {
         display: none;
     }
 }
 
+/* ハンバーガーメニューを開いたとき */
 .header__nav-sp.active {
-    /*right: 0;*/
-    right: 1.6rem;
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0); /* 元の位置にスライド */
 }
-/* ハンバーガーメニューの中ここまで */
 
+/* ハンバーガーメニューの設定ここまで */
 
 .header__list {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-size: 1.8rem;
+    font-size: vw(18);
     font-weight: 700;
     color: #fff;
-    gap: 2.5rem;
-}
+    gap: vw(25);
 
-@media (min-width: 768px) {
-    .header__list {
+    @include mq(md) {
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
-        font-size: 1.6rem;
+        font-size: px2Rem(16);
         color: #000;
-        gap: 4rem;
+        gap: px2Rem(40);
     }
 }
 
 .header__nav-pc {
     display: none;
-}
 
-@media (min-width: 768px) {
-    .header__nav-pc {
+    @include mq(md) {
         display: block;
     }
 }
+
+/* 企業コンセプト -----------------------------------------*/
+.concept {
+    margin-top: vw(63);
+
+    @include mq(md) {
+        margin-top: px2Rem(114);
+    }
+}
+
+.concept__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: vw(25);
+    align-items: flex-start;
+    padding: vw(20) vw(16);
+
+    @include mq(md) {
+        max-width: px2Rem(1200);
+        flex-direction: row;
+        justify-content: space-between;
+        gap: px2Rem(120);
+        margin: 0 auto;
+        padding: px2Rem(50);
+    }
+}
+
+.concept__title {
+    font-size: vw(28);
+    font-weight: 700;
+    /*margin-bottom: vw(26);*/
+
+    @include mq(md) {
+        font-size: px2Rem(40);
+        /*margin-bottom: px2Rem(15);*/
+    }
+}
+
+.concept__text {
+    line-break: anywhere;
+
+    @include mq(md) {
+        width: px2Rem(525);
+    }
+}
+
+
