@@ -12,8 +12,8 @@ html {
 
 @media (min-width:768px) {
     html {
-        font-size: calc(10 * 100vw / 1030);
-        /* 1030はPCカンプのコンテンツ幅 */
+        font-size: calc(10 * 100vw / 1200);
+        /* 1200はPCカンプのコンテンツ幅 */
     }
 }
 
@@ -29,6 +29,7 @@ $bg-green: #f3f9f6;
 $pad-pc-small: 1.65rem;
 $pad-pc-large: 5rem;
 $pad-sp: 1.6rem;
+$contents-pc: 120rem;
 
 /* スムーススクロール -----------------------------------------*/
 html {
@@ -167,7 +168,7 @@ a {
     padding: 0 $pad-sp;
 
     @media (min-width: 768px) {
-        max-width: 120rem;
+        max-width: $contents-pc;
         height: 11.4rem;
         margin: 0 auto;
         padding: $pad-pc-small;
@@ -275,7 +276,7 @@ a {
     padding: 2rem 1.6rem 5.5rem;
 
     @media (min-width: 768px) {
-        max-width: 120rem;
+        max-width: $contents-pc;
         margin: 0 auto;
         padding: 5rem 1.65rem 6.2rem;
     }
@@ -348,7 +349,7 @@ a {
     padding: 3.2rem 1.6rem; /* vw(32) vw(16) → 3.2rem 1.6rem */
 
     @media (min-width: 768px) {
-        max-width: 120rem;
+        max-width: $contents-pc;
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
@@ -412,14 +413,15 @@ a {
 
 /* 私たちが選ばれる3つの理由 -----------------------------------------*/
 .features__container {
-    width: 100%;
+    max-width: 100%;
     margin: 0 auto;
     padding: 5.4rem 1.6rem;
 
     @media (min-width: 768px) {
-        width: 120rem;
+        max-width: $contents-pc;
         padding: 6.4rem 1.65rem 6.3rem;
     }
+
 }
 
 .features__card-box {
@@ -433,9 +435,11 @@ a {
         gap: 3.2rem;
         padding-top: 0.8rem;
     }
+
 }
 
 .features__card {
+    width: 100%;
     height: 28.9rem;
     background-color: #fff;
     border-radius: 2.5rem;
@@ -446,6 +450,7 @@ a {
         width: calc((100% - 3rem)/3);
         height: 31.9rem;
     }
+
 }
 
 .features__card-image {
@@ -458,6 +463,7 @@ a {
     @media (min-width: 768px) {
         height: 22.6rem;
     }
+
 }
 
 .features__card-text {
@@ -472,18 +478,20 @@ a {
         padding: 1rem 2rem;
         font-size: 1.9rem;
     }
+
 }
 
 /* 製品・サービス紹介 -----------------------------------------*/
 .products__container {
-    width: 100%;
+    max-width: 100%;
     margin: 0 auto;
-    padding: 5.9rem 1.6rem 6rem;
+    padding: 5.9rem 1.6rem 3.5rem;
 
     @media (min-width: 768px) {
-        width: 120rem;
-        padding: 6.7rem 5rem 6.6rem;
+        max-width: $contents-pc;
+        padding: 6.7rem 5rem 3.5rem;
     }
+
 }
 
 .products__btn-box {
@@ -562,4 +570,75 @@ a {
     @media (min-width: 768px) {
         font-size: 2rem;
     }
+}
+
+/* お客様の事例紹介 -----------------------------------------*/
+.case {
+    background-color: $bg-green;
+}
+
+.case__container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 5.5rem 1.6rem;
+
+    @media (min-width: 768px) {
+        max-width: $contents-pc;
+        padding: 6rem 1.65em 5.5rem;
+    }
+
+}
+
+.case__card-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 2rem;
+
+    @media (min-width: 768px) {
+        flex-direction: row;
+        gap: 3.2rem;
+        padding-top: 0.8rem;
+    }
+
+}
+
+.case__card {
+    width: 100%;
+
+    @media (min-width: 768px) {
+        width: calc((100% - 3rem)/3);
+    }
+    
+}
+
+.case__card-image {
+    width: 100%;
+    height: 20.1rem;
+    object-fit: cover;
+    object-position: bottom;
+    border-radius: 2.5rem;
+    display: block;
+
+    @media (min-width: 768px) {
+        width: 36.9rem;
+        height: 22.6rem;
+    }
+
+}
+
+.case__card-text {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #09947b;
+    padding: 0.7rem 0;
+    line-break: anywhere;
+    letter-spacing: 0;
+
+
+    @media (min-width: 768px) {
+        font-size: 1.9rem;
+        padding: 0.7rem 0;
+    }
+
 }
