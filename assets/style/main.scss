@@ -111,6 +111,11 @@ body {
     line-height: 1.75;
     background-color: #fff;
     color: #000;
+
+    @include mq(md) {
+        font-size: px2Rem(15);
+    }
+    
 }
 
 span,
