@@ -25,7 +25,7 @@ $breakpoint-lg: $pc-content-width;
 
 // 本番用か否か？本番用の場合は1にする。
 // 0の場合はpxで出力される。パーフェクトピクセルで合わせる時に便利。
-$production: 1;
+$production: 0;
 
 //-----------------------------------------------------
 //  scss: ブレークポイント関数
@@ -86,6 +86,7 @@ $breakpoints: (
 
 /* 変数 -----------------------------------------*/
 $main-green: #168352;
+$bg-green: #f3f9f6;
 $pad-pc-small: 16.5px;
 $pad-pc-large: 50px;
 $pad-sp: 16px;
@@ -384,19 +385,28 @@ a {
     height: vw(450);
     background-image: url(/assets/image/main_visual.jpg);
     background-size: cover;
-    background-position: center;
+    background-position: center 57%;
     background-repeat: no-repeat;
     border-radius: vw(40);
     margin-top: vw(26);
 
     @include mq(md) {
         height: px2Rem(550);
+        background-position: center 57%;
         margin-top: px2Rem(55);
         border-radius: px2Rem(40)
     }
 }
 
 /* 私たちについて -----------------------------------------*/
+.about-us {
+    margin-bottom: vw(54);
+
+    @include mq(md) {
+        margin-bottom: px2Rem(5)
+    }
+}
+
 .about-us__bg {
     width: 100%;
     background-image: url(/assets/image/bg_about_us.jpg);
@@ -419,7 +429,7 @@ a {
         align-items: flex-start;
         gap: px2Rem(15);
         margin: 0 auto;
-        padding: px2Rem(8) px2Rem(130) px2Rem(63) px2Rem(110);
+        padding: px2Rem(8) px2Rem(130) px2Rem(60) px2Rem(110);
     }
 }
 
@@ -473,3 +483,85 @@ a {
         border-radius: px2Rem(40);
     }
 }
+
+/* 私たちが選ばれる3つの理由 -----------------------------------------*/
+.features {
+    background-color: $bg-green;
+    margin-bottom: vw(50);
+
+    @include mq(md) {
+        margin-bottom: px2Rem(50);
+    }
+    
+}
+
+.features__container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 vw(16);
+
+    @include mq(md) {
+        width: px2Rem(1200);
+        padding: px2Rem(60) px2Rem(16.5) px2Rem(63);
+    }
+    
+}
+
+.features__card-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: vw(20);
+
+    @include mq(md) {
+        flex-direction: row;
+        gap: px2Rem(32);
+        padding-top: px2Rem(8);
+    }
+    
+}
+
+.features__card {
+    width: vw(358);
+    height: vw(289);
+    background-color: #fff;
+    border-radius: vw(25);
+    overflow: hidden;
+    box-shadow: 0 0 vw(10) rgba(0, 0, 0, 0.1);
+
+    @include mq(md) {
+        width: calc((100% - px2Rem(30))/3);
+        height: px2Rem(319);
+    }
+    
+}
+
+.features__card-image {
+    width: 100%;
+    height: vw(201);
+    object-fit: cover;
+    object-position: bottom;
+    display: block;
+
+    @include mq(md) {
+        height: px2Rem(226);
+    }
+    
+}
+
+.features__card-text {
+    height: calc(vw(289) - vw(201));
+    padding: vw(12) vw(15);
+    background-color: #fff;
+    font-size: vw(18);
+    font-weight: 700;
+
+    @include mq(md) {
+        height: calc(px2Rem(319) - px2Rem(226));
+        padding: px2Rem(10)px2Rem(20);
+        font-size: px2Rem(19);
+    }
+    
+}
+
+/* 製品・サービス紹介 -----------------------------------------*/
