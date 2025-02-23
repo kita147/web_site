@@ -580,7 +580,7 @@ a {
 .case__container {
     max-width: 100%;
     margin: 0 auto;
-    padding: 5.5rem 1.6rem;
+    padding: 5.5rem 1.6rem 4.2rem;
 
     @media (min-width: 768px) {
         max-width: $contents-pc;
@@ -641,4 +641,89 @@ a {
         padding: 0.7rem 0;
     }
 
+}
+
+/* お知らせ -----------------------------------------*/
+.news__container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 5.4rem $pad-sp 2.7rem;
+
+    @media (min-width: 768px) {
+        max-width: $contents-pc;
+        padding: 6rem 15rem 2rem;
+    }
+
+}
+
+/* 縦並び・PCは横並び */
+.news__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+
+    @media (min-width: 768px) {
+        gap: 1em;
+        padding-top: 0.7rem;
+    }
+
+}
+
+.news__item{
+    padding-top: 1.6rem;
+    border-top: solid 1px #ddd;
+
+    @media (min-width: 768px) {
+        padding-top: 1.6rem;
+        display: flex;
+    }
+    
+}
+
+/*横ならびの日付とカテゴリー*/
+.news__meta {
+    display: flex;
+    gap: 1.2rem;
+    margin-bottom: 1rem;
+
+    @media (min-width: 768px) {
+        margin-bottom: 0;
+    }
+    
+}
+
+.news__date {
+    color: #222;
+
+    @media (min-width: 768px) {
+        font-size: 1.4rem;
+    }
+    
+}
+
+.news__label {
+    width: 13.4rem;
+    font-size: 1.3rem;
+    background-color: #473221;
+    color: #fff;
+    padding: 0.3rem;
+    text-align: center;
+    border-radius: 0.4rem;
+    margin-left: 0.5rem;
+
+    @media (min-width: 768px) {
+
+    }
+    
+}
+
+.news__content {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #09947b;
+
+    @media (min-width: 768px) {
+        margin-left: 2.5rem;
+    }
+    
 }
