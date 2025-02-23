@@ -1,0 +1,12 @@
+
+
+@forward "faq"; // 他のSCSSファイルに公開
+.hero__container {
+    width: $contents-pc;
+    height: 55rem;
+    background-image: url(/assets/image/hero_price.jpg);
+    background-size: cover;
+    /*background-position: center 57%;*/
+    background-repeat: no-repeat;
+    border-radius: 3rem;
+}

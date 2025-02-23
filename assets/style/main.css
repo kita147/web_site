@@ -261,16 +261,17 @@ a {
   }
 }
 
-/* メインビジュアル -----------------------------------------*/
-.main-visual {
+/* ヘッダー固定なのでmainを下げる -----------------------------------------*/
+.main {
   margin-top: 6.3rem;
 }
 @media (min-width: 768px) {
-  .main-visual {
+  .main {
     margin-top: 11.4rem;
   }
 }
 
+/* メインビジュアル -----------------------------------------*/
 .main-visual__container {
   padding: 2rem 1.6rem 5.5rem;
 }
@@ -836,5 +837,70 @@ a {
 @media (min-width: 768px) {
   .footer__text {
     font-size: 1.5rem;
+  }
+}
+
+/* 価格・スペックのページ -----------------------------------------*/
+.hero__container {
+  max-width: 100%;
+  padding: 2rem 1.6rem;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .hero__container {
+    max-width: 120rem;
+    padding: 4rem 0;
+  }
+}
+
+.hero__image {
+  height: 23rem;
+  background-image: url(/assets/image/hero_price.jpg);
+  background-position: center 52%;
+  background-position-x: 43%;
+  background-size: 198%;
+  background-repeat: no-repeat;
+  border-radius: 2.4rem;
+}
+@media (min-width: 768px) {
+  .hero__image {
+    height: 55rem;
+    background-position: center 55%;
+    background-position-x: 42%;
+    background-size: 126%;
+  }
+}
+
+.hero__title {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1;
+  padding: 2.8rem 0;
+  background-color: #fff;
+}
+@media (min-width: 768px) {
+  .hero__title {
+    font-size: 3.6rem;
+    padding: 4rem 0;
+    border-top-right-radius: 4rem;
+    margin-top: -11.3rem;
+    width: 32.8rem;
+    text-align: center;
+  }
+}
+
+.bread {
+  display: inline-block;
+}
+
+.bread-box {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.6rem;
+  font-size: 1.2rem;
+}
+@media (min-width: 768px) {
+  .bread-box {
+    padding: 1.5rem 0;
   }
 }/*# sourceMappingURL=main.css.map */
