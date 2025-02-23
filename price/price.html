@@ -17,6 +17,9 @@
         <!-- cssリセットの読み込み -->
         <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
 
+        <!-- swiperのCSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
         <!-- スタイルシートの読み込み -->
         <link rel="stylesheet" href="/assets/style/main.css">
 
@@ -79,9 +82,33 @@
             </section>
             <!-- ヒーロービューここまで-->
 
-            <!-- パンくずリストここから -->
+            <!-- ギャラリーここから -->
+            <secion class="gallery">
+                <div class="gallery__container">
+                    <h2 class="common-title">ギャラリー</h2>
 
-            <!-- パンくずリストここまで -->
+                    <!-- スライダーここから -->
+                    <div class="swiper__container">
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img class="swiper__image" src="/assets/image/gallery_img_01.jpg" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="swiper__image" src="/assets/image/gallery_img_02.jpg" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="swiper__image" src="/assets/image/gallery_img_03.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- スライダーモジュールを追加 -->
+                        <div class="swiper-pagination"></div>
+                    </div>
+
+                </div>
+            </secion>
+            <!-- ギャラリーここまで -->
 
 
 
@@ -100,6 +127,9 @@
 
         <!-- JavaScript（jQuery）の導入 -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+        <!-- swiperのJavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
         <!-- JavaScript（jQuery）ファイルの読み込み -->
         <script src="/assets/script/main.js"></script>

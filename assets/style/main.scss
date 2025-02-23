@@ -4,15 +4,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 
-
-
 /* コンテンツ幅以下可変レイアウト -----------------------------------------*/
 html {
     font-size: calc(10 * 100vw / 390);
     /* 390はSPデザインカンプの幅 */
 }
 
-@media (min-width:768px) {
+@media (min-width: 768px) {
     html {
         font-size: calc(10 * 100vw / 1200);
         /* 1200はPCカンプのコンテンツ幅 */
@@ -138,22 +136,31 @@ a {
     }
 }
 
-.title {
+.common-title {
     position: relative;
-    border-bottom: solid 3px skyblue;
+    border-bottom: solid 3px #ddd;
     font-size: 2.2rem;
     font-weight: 700;
-    margin-bottom: 1.5rem;
+    padding-bottom: 1.2rem;
 
+    @media (min-width: 768px) {
+        font-size: 2.8rem;
+        padding-bottom: 2.5rem;
+    }
 }
 
-title:after {
+.common-title:after {
     position: absolute;
     content: " ";
     display: block;
-    border-bottom: solid 3px #ffc778;
+    border-bottom: solid 3px $main-green;
     bottom: -3px;
-    width: 30%;
+    width: 14%;
+
+    @media (min-width: 768px) {
+        border-bottom: solid 5px $main-green;
+        width: 12.5%;
+    }
 }
 
 /* フォント -----------------------------------------*/
@@ -443,7 +450,6 @@ title:after {
         max-width: $contents-pc;
         padding: 6.4rem 1.65rem 6.3rem;
     }
-
 }
 
 .features__card-box {
@@ -457,7 +463,6 @@ title:after {
         gap: 3.2rem;
         padding-top: 0.8rem;
     }
-
 }
 
 .features__card {
@@ -469,10 +474,9 @@ title:after {
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
 
     @media (min-width: 768px) {
-        width: calc((100% - 3rem)/3);
+        width: calc((100% - 3rem) / 3);
         height: 31.9rem;
     }
-
 }
 
 .features__card-image {
@@ -485,7 +489,6 @@ title:after {
     @media (min-width: 768px) {
         height: 22.6rem;
     }
-
 }
 
 .features__card-text {
@@ -500,7 +503,6 @@ title:after {
         padding: 1rem 2rem;
         font-size: 1.9rem;
     }
-
 }
 
 /* 製品・サービス紹介 -----------------------------------------*/
@@ -513,7 +515,6 @@ title:after {
         max-width: $contents-pc;
         padding: 6.7rem 5rem 3.5rem;
     }
-
 }
 
 .products__btn-box {
@@ -608,7 +609,6 @@ title:after {
         max-width: $contents-pc;
         padding: 6rem 1.65em 5.5rem;
     }
-
 }
 
 .case__card-box {
@@ -622,16 +622,14 @@ title:after {
         gap: 3.2rem;
         padding-top: 0.8rem;
     }
-
 }
 
 .case__card {
     width: 100%;
 
     @media (min-width: 768px) {
-        width: calc((100% - 3rem)/3);
+        width: calc((100% - 3rem) / 3);
     }
-    
 }
 
 .case__card-image {
@@ -646,7 +644,6 @@ title:after {
         width: 36.9rem;
         height: 22.6rem;
     }
-
 }
 
 .case__card-text {
@@ -657,12 +654,10 @@ title:after {
     line-break: anywhere;
     letter-spacing: 0;
 
-
     @media (min-width: 768px) {
         font-size: 1.9rem;
         padding: 0.7rem 0;
     }
-
 }
 
 /* お知らせ -----------------------------------------*/
@@ -675,7 +670,6 @@ title:after {
         max-width: $contents-pc;
         padding: 6rem 15rem 6.3rem;
     }
-
 }
 
 /* 縦並び・PCは横並び */
@@ -688,7 +682,6 @@ title:after {
         gap: 1em;
         padding-top: 0.7rem;
     }
-
 }
 
 .news__item {
@@ -699,7 +692,6 @@ title:after {
         padding-top: 1.6rem;
         display: flex;
     }
-    
 }
 
 .news__item-underline {
@@ -716,7 +708,6 @@ title:after {
     @media (min-width: 768px) {
         margin-bottom: 0;
     }
-    
 }
 
 .news__date {
@@ -725,7 +716,6 @@ title:after {
     @media (min-width: 768px) {
         font-size: 1.4rem;
     }
-    
 }
 
 .news__label {
@@ -739,9 +729,7 @@ title:after {
     margin-left: 0.5rem;
 
     @media (min-width: 768px) {
-
     }
-    
 }
 
 .news__content {
@@ -752,7 +740,6 @@ title:after {
     @media (min-width: 768px) {
         margin-left: 2.5rem;
     }
-    
 }
 
 /* 「ニュース一覧へ」ボタンここから*/
@@ -820,7 +807,6 @@ title:after {
         max-width: $contents-pc;
         height: 9.6rem;
     }
-    
 }
 
 .footer__line {
@@ -831,7 +817,6 @@ title:after {
     @media (min-width: 768px) {
         height: 2.4rem;
     }
-    
 }
 
 .footer__text {
@@ -843,7 +828,6 @@ title:after {
     @media (min-width: 768px) {
         font-size: 1.5rem;
     }
-    
 }
 
 /* 価格・スペックのページ -----------------------------------------*/
@@ -855,7 +839,6 @@ title:after {
     @media (min-width: 768px) {
         max-width: $contents-pc;
         padding: 4rem 0;
-        
     }
 }
 
@@ -906,9 +889,77 @@ title:after {
     @media (min-width: 768px) {
         padding: 1.5rem 0;
     }
-    
 }
 
 .bread__arrow {
-    width: 5px;
+    width: 0.5rem;
+    height: 1rem ;
+    vertical-align: middle;
+}
+
+/* ギャラリー -----------------------------------------*/
+.gallery__container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 1.5rem $pad-sp 5.5rem;
+
+    @media (min-width: 768px) {
+        max-width: $contents-pc;
+        padding: 0.5rem 20rem 6.3rem;
+    }
+}
+
+/* スライダー（swiper）の設定 */
+.swiper__container {
+    width: 100%;
+    margin-inline: auto;
+    position: relative;
+    margin-top: 2.5rem;
+
+    @media (min-width: 768px) {
+        width: 80rem;
+        margin-top: 3.3rem;
+    }
+}
+
+/* ドットの大きさを変更 */
+.swiper-pagination-bullet {
+    width: 0.8rem;
+    height: 0.8rem;
+}
+
+/* ドットの非アクティブ色を変更 */
+.swiper-pagination-bullet {
+    background-color: #eee;
+    opacity: 1;
+}
+
+/* ドットのアクティブ色を変更 */
+.swiper-pagination-bullet-active {
+    background-color: #168352;
+}
+
+
+/* ページネーション（ドット）のY位置 */
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 0.4rem;
+
+    @media (min-width: 768px) {
+        bottom: 1.5rem;
+    }
+    
+}
+
+/* スライダーの中身 */
+.swiper__image {
+    width: 100%;
+    height: 23.7rem;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 2.5rem;
+
+    @media (min-width: 768px) {
+        height: 50rem;
+    }
+
 }

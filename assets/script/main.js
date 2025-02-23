@@ -14,3 +14,28 @@ $(document).ready(function () {
         $(".header__nav-sp").removeClass("active"); // header__nav-spのactiveクラスを削除
     });
 });
+
+////////// swiperの設定 //////////
+const swiper = new Swiper(".swiper", {
+
+    // 無限ループの設定
+    loop: false,
+    loopAdditionalSlides: 1,
+    
+    //開始スライドの選定
+    initialSlide: 1,
+
+    // スライド数の設定
+    slidesPerView: 1,
+    spaceBetween: 10,
+
+    // スライド数が不足している時でもページネーションを表示する
+    watchOverflow: false,
+
+    // ページネーションの設定
+    pagination: {
+        el: ".swiper-pagination",
+        type: "bullets",
+        clickable: true,
+    },
+});
