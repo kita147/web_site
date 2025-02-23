@@ -212,7 +212,7 @@ a {
   padding: 3.2rem;
   background-color: #168352;
   border-radius: 2.5rem;
-  z-index: 1000;
+  z-index: 1001;
   /* 初期状態：透明＆非表示 */
   opacity: 0;
   visibility: hidden;
@@ -700,6 +700,11 @@ a {
   }
 }
 
+.news__item-underline {
+  padding-bottom: 1.6rem;
+  border-bottom: solid 1px #ddd;
+}
+
 /*横ならびの日付とカテゴリー*/
 .news__meta {
   display: flex;
@@ -740,4 +745,50 @@ a {
   .news__content {
     margin-left: 2.5rem;
   }
+}
+
+/* 「ニュース一覧へ」ボタンここから*/
+.news__btn-box {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5rem;
+}
+@media (min-width: 768px) {
+  .news__btn-box {
+    margin-top: 3.8rem;
+  }
+}
+
+/* ボタンの影部分（動かさない） */
+.news__btn-shadow {
+  position: relative;
+  width: 30rem;
+  height: 6.6rem;
+  border-radius: 5rem;
+  background-color: #066655;
+}
+
+/* ボタン本体 */
+.news__btn {
+  position: absolute;
+  top: -6px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  line-height: 6.6rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+  background-color: #09947b;
+  border-radius: 5rem;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+/* ホバー時にボタン本体だけが沈む（Y軸方向のみ）*/
+.news__btn:hover {
+  transform: translateY(4px);
 }/*# sourceMappingURL=main.css.map */
