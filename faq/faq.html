@@ -52,7 +52,7 @@
                 <nav class="header__nav-pc">
                     <ul class="header__list">
                         <li><a href="/price/price.html">価格・スペック</a></li>
-                        <li><a href="/faq/faq.html">よくあるご質問</a></li>
+                        <li><a class="c-main-green" href="/faq/faq.html">よくあるご質問</a></li>
                     </ul>
                 </nav>
 
@@ -61,7 +61,44 @@
         <!-- ヘッダーここまで -->
 
         <!-- メインここから -->
-        <main>
+        <main class="main">
+            <!-- ヒーロービューここから -->
+            <section class="hero">
+                <div class="hero__container">
+                    <div class="hero__image--faq"></div>
+                    <h1 class="hero__title">よくあるご質問</h1>
+                    <nav aria-label="bread">
+                        <ul class="bread-box">
+                            <li><a href="/">トップ</a></li>
+                            <li><img class="bread__arrow" src="/assets/image/bread_arrow.svg" alt=""></li>
+                            <li>よくあるご質問</li>
+                        </ul>
+                    </nav>
+                </div>
+            </section>
+            <!-- ヒーロービューここまで-->
+
+            <!-- アコーディオンここから-->
+            <div class="faq">
+                <div class="faq__container">
+                    <div class="faq__box">
+                        <div class="faq__question">
+                            <div class="faq__title-box">
+                                <div class="faq__font-qa" >Q.</div>
+                                <div class="faq__label">ご利用について</div>
+                                <button class="faq__button" aria-label="開閉ボタン"><img src="/assets/image/icon_plus.svg" alt=""></button>
+                            </div>
+                            <p class="faq__question-text">農業用ドローンの主な用途は何ですか？</p>
+                        </div>
+                        <div class="faq__answer">
+                            <p class="faq__answer-text">農業用ドローンは、作物の健康状態のモニタリング、除草剤・肥料等の散布、灌漑システムの管理など、農業生産の効率を向上させるために</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- アコーディオンここまで-->
+            
             
         </main>
         <!-- メインここまで -->

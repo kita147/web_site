@@ -171,6 +171,10 @@ a {
   font-style: normal;
 }
 
+.c-main-green {
+  color: #168352;
+}
+
 .f-normal {
   font-weight: 400;
 }
@@ -884,21 +888,18 @@ a {
   }
 }
 
-.hero__image {
+.hero__image--price {
   height: 23rem;
-  background-image: url(/assets/image/hero_price.jpg);
-  background-position: center 52%;
-  background-position-x: 43%;
-  background-size: 198%;
+  background-image: url(/assets/image/hero_price_sp.jpg);
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   border-radius: 2.4rem;
 }
 @media (min-width: 768px) {
-  .hero__image {
+  .hero__image--price {
     height: 55rem;
-    background-position: center 55%;
-    background-position-x: 42%;
-    background-size: 126%;
+    background-image: url(/assets/image/hero_price_pc.jpg);
   }
 }
 
@@ -912,7 +913,7 @@ a {
 @media (min-width: 768px) {
   .hero__title {
     font-size: 3.6rem;
-    padding: 4rem 0;
+    padding: 3.6rem 0 4.4rem;
     border-top-right-radius: 4rem;
     margin-top: -11.3rem;
     width: 32.8rem;
@@ -1009,6 +1010,8 @@ a {
 @media (min-width: 768px) {
   .swiper__image {
     height: 50rem;
+    -o-object-position: center;
+       object-position: center;
   }
 }
 
@@ -1021,7 +1024,7 @@ a {
 @media (min-width: 768px) {
   .service__container {
     max-width: 120rem;
-    padding: 0.5rem 20rem 6.3rem;
+    padding: 0.5rem 20rem 6.5rem;
   }
 }
 
@@ -1108,7 +1111,7 @@ a {
 @media (min-width: 768px) {
   .spec__container {
     max-width: 120rem;
-    padding: 0.5rem 20rem 7rem;
+    padding: 0.5rem 20rem 7.2rem;
   }
 }
 
@@ -1117,7 +1120,7 @@ a {
 }
 @media (min-width: 768px) {
   .spec__sub-container {
-    margin-top: 3.6rem;
+    margin-top: 3.4rem;
     padding: 0 3rem;
   }
 }
@@ -1132,7 +1135,7 @@ a {
 @media (min-width: 768px) {
   .spec__sub-title {
     font-size: 2.4rem;
-    padding: 0.5rem 2rem;
+    padding: 0.7rem 1.6rem;
     border-left: solid 3px #168352;
   }
 }
@@ -1148,7 +1151,7 @@ a {
 }
 @media (min-width: 768px) {
   .price__table {
-    margin-top: 3rem;
+    margin-top: 2.5rem;
   }
 }
 
@@ -1249,4 +1252,20 @@ a {
 .contact__btn:hover {
   background-color: #fff;
   color: #168352;
+}
+
+/* よくあるご質問のページ -----------------------------------------*/
+.hero__image--faq {
+  height: 23rem;
+  background-image: url(/assets/image/hero_faq_sp.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 2.4rem;
+}
+@media (min-width: 768px) {
+  .hero__image--faq {
+    height: 55rem;
+    background-image: url(/assets/image/hero_faq_pc.jpg);
+  }
 }/*# sourceMappingURL=main.css.map */

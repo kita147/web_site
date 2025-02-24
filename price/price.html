@@ -54,7 +54,7 @@
                 <!-- PCナビメニューここから -->
                 <nav class="header__nav-pc">
                     <ul class="header__list">
-                        <li><a href="/price/price.html">価格・スペック</a></li>
+                        <li><a  class="c-main-green" href="/price/price.html">価格・スペック</a></li>
                         <li><a href="/faq/faq.html">よくあるご質問</a></li>
                     </ul>
                 </nav>
@@ -69,7 +69,7 @@
             <!-- ヒーロービューここから -->
             <section class="hero">
                 <div class="hero__container">
-                    <div class="hero__image"></div>
+                    <div class="hero__image--price"></div>
                     <h1 class="hero__title">価格・スペック</h1>
                     <nav aria-label="bread">
                         <ul class="bread-box">
@@ -92,13 +92,22 @@
                         <div class="swiper">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                    <img class="swiper__image" src="/assets/image/gallery_img_01.jpg" alt="">
+                                    <picture>
+                                        <source srcset="/assets/image/gallery_pc_01.jpg" media="(min-width: 768px)">
+                                        <img src="/assets/image/gallery_sp_01.jpg" alt="" class="swiper__image">
+                                    </picture>
                                 </div>
                                 <div class="swiper-slide">
-                                    <img class="swiper__image" src="/assets/image/gallery_img_02.jpg" alt="">
+                                    <picture>
+                                        <source srcset="/assets/image/gallery_pc_02.jpg" media="(min-width: 768px)">
+                                        <img src="/assets/image/gallery_sp_02.jpg" alt="" class="swiper__image">
+                                    </picture>
                                 </div>
                                 <div class="swiper-slide">
-                                    <img class="swiper__image" src="/assets/image/gallery_img_03.jpg" alt="">
+                                    <picture>
+                                        <source srcset="/assets/image/gallery_pc_03.jpg" media="(min-width: 768px)">
+                                        <img src="/assets/image/gallery_sp_03.jpg" alt="" class="swiper__image">
+                                    </picture>
                                 </div>
                             </div>
                         </div>
