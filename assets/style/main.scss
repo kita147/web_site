@@ -145,7 +145,7 @@ a {
 
     @media (min-width: 768px) {
         font-size: 2.8rem;
-        padding-bottom: 2.5rem;
+        padding-bottom: 2.6rem;
     }
 }
 
@@ -901,7 +901,7 @@ a {
 .gallery__container {
     max-width: 100%;
     margin: 0 auto;
-    padding: 1.5rem $pad-sp 5.5rem;
+    padding: 1.5rem $pad-sp 4.5rem;
 
     @media (min-width: 768px) {
         max-width: $contents-pc;
@@ -962,4 +962,65 @@ a {
         height: 50rem;
     }
 
+}
+
+/* 特徴 -----------------------------------------*/
+.service__container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 1.5rem $pad-sp 5.5rem;
+
+    @media (min-width: 768px) {
+        max-width: $contents-pc;
+        padding: 0.5rem 20rem 6.3rem;
+    }
+}
+
+/* 特徴のカード（上：画像、下：黒文字）*/
+.service__card-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 2.7rem;
+    margin-top: 2.5rem;
+
+    @media (min-width: 768px) {
+        flex-direction: row;
+        gap: 3rem;
+        padding-top: 0.8rem;
+    }
+}
+
+.service__card {
+    width: 100%;
+
+    @media (min-width: 768px) {
+        width: calc((100% - 3.3rem) / 3);
+    }
+}
+
+.service__card-image {
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+    object-position: bottom;
+    border-radius: 1.6rem;
+    display: block;
+
+    @media (min-width: 768px) {
+        width: 24.6rem;
+        height: 15rem;
+    }
+}
+
+.service__card-text {
+    font-size: 1.8rem;
+    font-weight: 700;
+    padding: 0.7rem 0;
+    line-break: anywhere;
+    letter-spacing: 0;
+
+    @media (min-width: 768px) {
+        padding: 0.7rem 0;
+    }
 }

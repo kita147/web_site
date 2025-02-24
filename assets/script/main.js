@@ -21,9 +21,6 @@ const swiper = new Swiper(".swiper", {
     // 無限ループの設定
     loop: false,
     loopAdditionalSlides: 1,
-    
-    //開始スライドの選定
-    initialSlide: 1,
 
     // スライド数の設定
     slidesPerView: 1,
