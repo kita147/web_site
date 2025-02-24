@@ -43,7 +43,6 @@ body {
   color: #000;
 }
 
-th,
 h1,
 h2,
 h3,
@@ -170,6 +169,10 @@ a {
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
+}
+
+.f-normal {
+  font-weight: 400;
 }
 
 /* ヘッダーここから -----------------------------------------*/
@@ -1013,7 +1016,7 @@ a {
 .service__container {
   max-width: 100%;
   margin: 0 auto;
-  padding: 1.5rem 1.6rem 5.5rem;
+  padding: 1.5rem 1.6rem 4.7rem;
 }
 @media (min-width: 768px) {
   .service__container {
@@ -1094,4 +1097,107 @@ a {
 .service__price-yen {
   font-family: "Noto Sans JP", serif;
   font-size: 1.6rem;
+}
+
+/* スペック -----------------------------------------*/
+.spec__container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 1.5rem 1.6rem 6.5rem;
+}
+@media (min-width: 768px) {
+  .spec__container {
+    max-width: 120rem;
+    padding: 0.5rem 20rem 7rem;
+  }
+}
+
+.spec__sub-container {
+  margin-top: 2.5rem;
+}
+@media (min-width: 768px) {
+  .spec__sub-container {
+    margin-top: 3.6rem;
+    padding: 0 3rem;
+  }
+}
+
+.spec__sub-title {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+  padding: 0.5rem 1.6rem;
+  border-left: solid 2px #168352;
+}
+@media (min-width: 768px) {
+  .spec__sub-title {
+    font-size: 2.4rem;
+    padding: 0.5rem 2rem;
+    border-left: solid 3px #168352;
+  }
+}
+
+/* スペックの表 */
+.price__table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  line-height: 1;
+  margin-top: 1.6rem;
+  border-bottom: 1px solid #ddd;
+}
+@media (min-width: 768px) {
+  .price__table {
+    margin-top: 3rem;
+  }
+}
+
+/* 行 */
+.price__table-row {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .price__table-row {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+/* 左側のセル（ラベル部分） */
+.price__data {
+  width: 100%;
+  font-size: 1.6rem;
+  font-weight: 700;
+  border: 1px solid #ddd;
+  padding: 1.1rem 1.8rem;
+  line-height: 1;
+  background-color: #f5f5f5;
+  line-break: anywhere;
+}
+@media (min-width: 768px) {
+  .price__data {
+    width: 27%;
+    padding: 2.29rem 1.9rem;
+    border-bottom: none;
+  }
+}
+
+/* 右側のセル（値部分） */
+.price__data-right {
+  width: 100%;
+  font-weight: 400;
+  border-top: none;
+  border-bottom: none;
+  background-color: #fff;
+}
+@media (min-width: 768px) {
+  .price__data-right {
+    width: 73%;
+    border-top: 1px solid #ddd;
+    border-left: none;
+    margin-left: 0.5rem;
+  }
 }/*# sourceMappingURL=main.css.map */
