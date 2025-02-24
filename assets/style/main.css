@@ -43,7 +43,6 @@ body {
   color: #000;
 }
 
-span,
 th,
 h1,
 h2,
@@ -1010,7 +1009,7 @@ a {
   }
 }
 
-/* 特徴 -----------------------------------------*/
+/* 特徴と価格 -----------------------------------------*/
 .service__container {
   max-width: 100%;
   margin: 0 auto;
@@ -1029,13 +1028,13 @@ a {
   flex-direction: column;
   width: 100%;
   gap: 2.7rem;
-  margin-top: 2.5rem;
+  padding: 2.5rem 0 5rem;
 }
 @media (min-width: 768px) {
   .service__card-box {
     flex-direction: row;
     gap: 3rem;
-    padding-top: 0.8rem;
+    padding: 3.3rem 0 5.5rem;
   }
 }
 
@@ -1076,4 +1075,23 @@ a {
   .service__card-text {
     padding: 0.7rem 0;
   }
+}
+
+/* メーカー希望小売価格 */
+.service__price {
+  font-family: "Montserrat", serif;
+  font-weight: 700;
+  font-size: 3.2rem;
+  line-height: 1;
+  margin-top: 2.3rem;
+}
+@media (min-width: 768px) {
+  .service__price {
+    margin-top: 3rem;
+  }
+}
+
+.service__price-yen {
+  font-family: "Noto Sans JP", serif;
+  font-size: 1.6rem;
 }/*# sourceMappingURL=main.css.map */
