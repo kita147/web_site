@@ -366,7 +366,7 @@ a {
 /* 私たちについて -----------------------------------------*/
 .about-us__bg {
     width: 100%;
-    background-image: url(/assets/image/bg_about_us.jpg);
+    background-image: url(/assets/image/about_us_bg.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -434,7 +434,7 @@ a {
         display: block;
         width: 39rem; /* px2Rem(390) → 39rem */
         height: 57rem; /* px2Rem(570) → 57rem */
-        background-image: url(/assets/image/bg_about_us.jpg);
+        background-image: url(/assets/image/about_us_bg.jpg);
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -1135,5 +1135,54 @@ a {
         border-top: 1px solid #ddd;
         border-left: none;
         margin-left: 0.5rem;
+    }
+}
+
+/* お問い合わせボタン -----------------------------------------*/
+.contact {
+    height: 36rem;
+    background-image: url(/assets/image/contact_bg_sp.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @media (min-width: 768px) {
+        height: 45rem;
+        background-image: url(/assets/image/contact_bg_pc.jpg);
+
+    }
+}
+
+.contact__container {
+    display: flex;
+    justify-content: center;
+    align-items: center; // 中央配置
+    height: 100%; // 親要素の高さを100%に
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 $pad-sp;
+
+    @media (min-width: 768px) {
+        max-width: $contents-pc;
+        padding: 0 20rem;
+    }
+}
+
+.contact__btn {
+    width: 35.8rem;
+    height: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    border: solid 2px #fff;
+    border-radius: 4.4rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    &:hover {
+        background-color: #fff;
+        color: $main-green;
     }
 }
