@@ -161,6 +161,10 @@ a {
     }
 }
 
+radius-small {
+    border-radius: 1.8rem;
+}
+
 /* フォント -----------------------------------------*/
 .montserrat-semi-bold {
     font-family: "Montserrat", serif;
@@ -1203,4 +1207,124 @@ a {
         height: 55rem;
         background-image: url(/assets/image/hero_faq_pc.jpg);
     }
+}
+
+/* アコーディオン型QA -----------------------------------------*/
+.faq__container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 1.5rem $pad-sp 6.5rem;
+
+    @media (min-width: 768px) {
+        max-width: $contents-pc;
+        padding: 0.5rem 20rem 7.2rem;
+    }
+}
+
+.faq__box {
+    display: flex;
+    flex-direction: column;
+    border: solid 1px #ccc;
+    border-radius: 1.8rem;
+}
+
+/* アコーディオンの質問部分 */
+.faq__question {
+    width: 100%;
+    padding: 2.3rem 2.3rem 1.9rem;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+.faq__title-box {
+    display: flex;
+    align-items: center;
+    line-height: 1;
+}
+
+.faq__font-qa {
+    font-family: "Montserrat", serif;
+    font-weight: 700;
+    font-size: 2.4rem;
+    color: $main-green;
+    padding-right: 1.5rem;
+}
+
+.faq__label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10rem;
+    height: 2.4rem;
+    font-size: 1.1rem;
+    color: #168352;
+    border: solid 1px #168352;
+    border-radius: 0.5rem;
+}
+
+/* アコーディオン開閉ボタン */
+.faq__button {
+    width: 2rem;
+    height: 2rem;
+    margin-left: auto;
+    position: relative;
+}
+
+/*「+」の形状 */
+.faq__button::before,
+.faq__button::after {
+    content: "";
+    position: absolute;
+    background-color: #000;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* 横棒 */
+.faq__button::before {
+    width: 2rem;
+    height: 2px;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+/* 縦棒 */
+.faq__button::after {
+    width: 2px;
+    height: 2rem;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* 開いたときに横棒を回転させて「−」にする */
+.faq__box.active .faq__button::before {
+    transform: translateY(-50%) rotate(0deg);
+}
+
+/* 開いたときは縦棒（::after）を消して「−」にする */
+.faq__box.active .faq__button::after {
+    transform: translateX(-50%) rotate(90deg);
+    opacity: 0;
+}
+
+/* 質問の文章 */
+.faq__question-text {
+    font-size: 1.6rem;
+    font-weight: 700;
+    padding: 0 4.3rem;
+}
+
+/* アコーディオンメニューの中身（回答） */
+.faq__answer {
+    display: none;
+    padding: 1.5rem 1.6rem;
+    font-size: 1.6rem;
+    padding: 0 2.4rem 2.4rem;
+}
+
+/* アクティブ時（開いたとき）は表示 */
+.faq__answer.active  {
+    display: block;
 }
