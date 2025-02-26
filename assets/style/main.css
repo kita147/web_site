@@ -156,33 +156,6 @@ a {
   }
 }
 
-radius-small {
-  border-radius: 1.8rem;
-}
-
-/* フォント -----------------------------------------*/
-.montserrat-semi-bold {
-  font-family: "Montserrat", serif;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal;
-}
-
-.montserrat-bold {
-  font-family: "Montserrat", serif;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.c-main-green {
-  color: #168352;
-}
-
-.f-normal {
-  font-weight: 400;
-}
-
 /* ヘッダーここから -----------------------------------------*/
 .header {
   background-color: #fff;
@@ -242,9 +215,9 @@ radius-small {
 
 /* ハンバーガーメニューの設定ここから */
 .header__nav-sp {
-  position: absolute; /* ヘッダーの中で相対配置 */
-  top: 100%; /* ヘッダーの真下 */
-  left: 50%; /* 左右中央配置 */
+  position: absolute;
+  top: 100%;
+  left: 50%;
   transform: translateX(-50%) translateY(-1rem); /* 初期位置を少し上に */
   width: 35.8rem;
   text-align: center;
@@ -326,24 +299,24 @@ radius-small {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 2.5rem; /* vw(25) → 2.5rem */
+  gap: 2.5rem;
   align-items: flex-start;
 }
 @media (min-width: 768px) {
   .main-visual__box {
     flex-direction: row;
-    gap: 13.5rem; /* px2Rem(135) → 13.5rem */
+    gap: 13.5rem;
   }
 }
 
 .main-visual__title {
-  font-size: 2.8rem; /* vw(28) → 2.8rem */
+  font-size: 2.8rem;
   font-weight: 700;
   line-height: 1;
 }
 @media (min-width: 768px) {
   .main-visual__title {
-    font-size: 4rem; /* px2Rem(40) → 4rem */
+    font-size: 4rem;
   }
 }
 
@@ -352,27 +325,27 @@ radius-small {
 }
 @media (min-width: 768px) {
   .main-visual__text {
-    width: 52.5rem; /* px2Rem(525) → 52.5rem */
-    font-size: 1.5rem; /* px2Rem(15) → 1.5rem */
+    width: 52.5rem;
+    font-size: 1.5rem;
   }
 }
 
 .main-visual__image {
   width: 100%;
-  height: 45rem; /* vw(450) → 45rem */
+  height: 45rem;
   background-image: url(/assets/image/main_visual.jpg);
   background-size: cover;
   background-position: center 57%;
   background-repeat: no-repeat;
-  border-radius: 4rem; /* vw(40) → 4rem */
-  margin-top: 2.6rem; /* vw(26) → 2.6rem */
+  border-radius: 4rem;
+  margin-top: 2.6rem;
 }
 @media (min-width: 768px) {
   .main-visual__image {
-    height: 55rem; /* px2Rem(550) → 55rem */
+    height: 55rem;
     background-position: center 57%;
-    margin-top: 5.5rem; /* px2Rem(55) → 5.5rem */
-    border-radius: 4rem; /* px2Rem(40) → 4rem */
+    margin-top: 5.5rem;
+    border-radius: 4rem;
   }
 }
 
@@ -391,7 +364,7 @@ radius-small {
 }
 
 .about-us__container {
-  padding: 3.2rem 1.6rem; /* vw(32) vw(16) → 3.2rem 1.6rem */
+  padding: 3.2rem 1.6rem;
 }
 @media (min-width: 768px) {
   .about-us__container {
@@ -401,7 +374,6 @@ radius-small {
     align-items: flex-start;
     gap: 1.5rem;
     margin: 0 auto;
-    /* px2Rem(8) px2Rem(130) px2Rem(60) px2Rem(110) → 0.8rem 13rem 6rem 11rem */
     padding: 0.8rem 13rem 6rem 11rem;
   }
 }
@@ -419,9 +391,9 @@ radius-small {
 }
 @media (min-width: 768px) {
   .about-us__text-box {
-    width: 40.5rem; /* px2Rem(405) → 40.5rem */
+    width: 40.5rem;
     text-align: left;
-    gap: 2.5rem; /* px2Rem(25) → 2.5rem */
+    gap: 2.5rem;
     padding: 10rem 0 0;
   }
 }
@@ -432,7 +404,7 @@ radius-small {
 }
 @media (min-width: 768px) {
   .about-us__text-first {
-    font-size: 2rem; /* px2Rem(20) → 2rem */
+    font-size: 2rem;
   }
 }
 
@@ -451,13 +423,13 @@ radius-small {
 @media (min-width: 768px) {
   .about-us__image {
     display: block;
-    width: 39rem; /* px2Rem(390) → 39rem */
-    height: 57rem; /* px2Rem(570) → 57rem */
+    width: 39rem;
+    height: 57rem;
     background-image: url(/assets/image/about_us_bg.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    border-radius: 4rem; /* px2Rem(40) → 4rem */
+    border-radius: 4rem;
   }
 }
 
@@ -1173,7 +1145,7 @@ radius-small {
   }
 }
 
-/* 左側のセル（ラベル部分） */
+/* 左側のセル */
 .price__data {
   width: 100%;
   font-size: 1.6rem;
@@ -1192,7 +1164,7 @@ radius-small {
   }
 }
 
-/* 右側のセル（値部分） */
+/* 右側のセル */
 .price__data-right {
   width: 100%;
   font-weight: 400;
@@ -1369,7 +1341,6 @@ radius-small {
   transform: translateY(-50%) rotate(0deg);
 }
 
-/* 開いたときは縦棒（::after）を消して「−」にする */
 .faq__box.active .faq__button::after {
   transform: translateX(-50%) rotate(90deg);
   opacity: 0;
@@ -1390,7 +1361,7 @@ radius-small {
   padding: 0 2.4rem 2.4rem;
 }
 
-/* アクティブ時（開いたとき）は表示 */
+/* アクティブ時（開いたとき）は表示する */
 .faq__answer.active {
   display: block;
 }/*# sourceMappingURL=main.css.map */
