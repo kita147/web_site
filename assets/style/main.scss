@@ -326,7 +326,7 @@ a {
 .main-visual__image {
     width: 100%;
     height: 45rem;
-    background-image: url(/assets/image/main_visual.jpg);
+    background-image: url(/assets/image/main_visual_sp.jpg);
     background-size: cover;
     background-position: center 57%;
     background-repeat: no-repeat;
@@ -335,6 +335,7 @@ a {
 
     @media (min-width: 768px) {
         height: 55rem;
+        background-image: url(/assets/image/main_visual_pc.jpg);
         background-position: center 57%;
         margin-top: 5.5rem;
         border-radius: 4rem;
@@ -344,7 +345,7 @@ a {
 /* 私たちについて -----------------------------------------*/
 .about-us__bg {
     width: 100%;
-    background-image: url(/assets/image/about_us_bg.jpg);
+    background-image: url(/assets/image/about_us_sp.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -411,7 +412,7 @@ a {
         display: block;
         width: 39rem;
         height: 57rem;
-        background-image: url(/assets/image/about_us_bg.jpg);
+        background-image: url(/assets/image/about_us_pc.jpg);
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -519,13 +520,12 @@ a {
     color: #fff;
     border-radius: 2.4rem;
     height: 14rem;
-    padding: 2.2rem 2rem;
+    padding: 2.2rem;
     gap: 1.7rem;
     transition: background-color 0.3s ease, color 0.3s ease;
 
     @media (min-width: 768px) {
         height: 18rem;
-        padding: 2.2rem;
     }
 
     &:hover {
@@ -555,7 +555,6 @@ a {
 .products__btn-image {
     width: 10rem;
     height: 10rem;
-    border-radius: 50%;
     object-fit: cover;
     margin-left: 0.4rem;
 
@@ -618,10 +617,15 @@ a {
     object-position: bottom;
     border-radius: 2.5rem;
     display: block;
+    transition: 0.3s ease;
 
     @media (min-width: 768px) {
         width: 36.9rem;
         height: 22.6rem;
+    }
+
+    &:hover {
+        opacity: 0.7;
     }
 }
 
