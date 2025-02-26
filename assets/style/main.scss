@@ -1184,11 +1184,11 @@ a {
     gap: 2rem;
     max-width: 100%;
     margin: 0 auto;
-    padding: 1.5rem $pad-sp 6.5rem;
+    padding: 1.5rem $pad-sp 17.3rem;
 
     @media (min-width: 768px) {
         max-width: $contents-pc;
-        padding: 0.5rem 20rem 7.2rem;
+        padding: 0.4rem 20rem 8.5rem;
     }
 }
 
@@ -1206,6 +1206,24 @@ a {
     cursor: pointer;
     display: flex;
     flex-direction: column;
+
+    @media (min-width: 768px) {
+        padding: 2.5rem 3.1rem 1rem;
+    }
+    
+}
+
+/* 質問の文章 */
+.faq__question-text {
+    font-size: 1.6rem;
+    font-weight: 700;
+    padding: 0 4.3rem;
+
+    @media (min-width: 768px) {
+        font-size: 1.8rem;
+        padding: 0.8rem 4.3rem;
+    }
+    
 }
 
 .faq__title-box {
@@ -1280,19 +1298,18 @@ a {
     opacity: 0;
 }
 
-/* 質問の文章 */
-.faq__question-text {
-    font-size: 1.6rem;
-    font-weight: 700;
-    padding: 0 4.3rem;
-}
-
 /* アコーディオンメニューの中身（回答） */
 .faq__answer {
     display: none;
-    padding: 1.5rem 1.6rem;
     font-size: 1.6rem;
-    padding: 0 2.4rem 2.4rem;
+    padding: 0 2.4rem 1.7rem;
+    margin: -1.5rem 0 0.3rem;
+
+    @media (min-width: 768px) {
+        padding: 0 3.1rem 1.7rem;
+        margin: -0.3rem 0 0.3rem;
+    }
+    
 }
 
 /* アクティブ時（開いたとき）は表示する */

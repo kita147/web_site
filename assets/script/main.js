@@ -21,9 +21,6 @@ $(document).ready(function () {
         const $box = $(this).closest(".faq__box");
         const $answer = $box.find(".faq__answer");
 
-        // 他の開いているアコーディオンを閉じる
-        $(".faq__box").not($box).removeClass("active").find(".faq__answer").slideUp();
-
         // クリックしたアコーディオンを開閉
         $box.toggleClass("active");
         $answer.slideToggle();
