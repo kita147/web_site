@@ -128,6 +128,7 @@ a {
 }
 
 .common-title {
+  width: 100%;
   position: relative;
   border-bottom: solid 3px #ddd;
   font-size: 2.2rem;
@@ -136,9 +137,11 @@ a {
 }
 @media (min-width: 768px) {
   .common-title {
+    width: 80rem;
     border-bottom: solid 5px #ddd;
     font-size: 2.8rem;
     padding-bottom: 2.4rem;
+    margin: 0 2rem;
   }
 }
 
@@ -477,7 +480,7 @@ a {
 }
 @media (min-width: 768px) {
   .features__card {
-    width: calc((100% - 3rem) / 3);
+    width: calc((100% - 3.2rem) / 3);
     height: 31.9rem;
   }
 }
@@ -938,7 +941,7 @@ a {
 @media (min-width: 768px) {
   .gallery__container {
     max-width: 120rem;
-    padding: 0.5rem 20rem 6.3rem;
+    padding: 0.5rem 18rem 6.3rem;
   }
 }
 
@@ -1010,7 +1013,7 @@ a {
 @media (min-width: 768px) {
   .service__container {
     max-width: 120rem;
-    padding: 0.5rem 20rem 6.5rem;
+    padding: 0.5rem 18rem 6.5rem;
   }
 }
 
@@ -1020,13 +1023,14 @@ a {
   flex-direction: column;
   width: 100%;
   gap: 2.7rem;
-  padding: 2.5rem 0 5rem;
+  padding: 2.5rem 2rem 5rem;
 }
 @media (min-width: 768px) {
   .service__card-box {
     flex-direction: row;
+    justify-content: space-between;
     gap: 3rem;
-    padding: 3.3rem 0 5.5rem;
+    padding: 3.3rem 2rem 5.5rem;
   }
 }
 
@@ -1035,7 +1039,7 @@ a {
 }
 @media (min-width: 768px) {
   .service__card {
-    width: calc((100% - 3.3rem) / 3);
+    width: calc((100% - 3rem) / 3);
   }
 }
 
@@ -1079,7 +1083,7 @@ a {
 }
 @media (min-width: 768px) {
   .service__price {
-    margin-top: 3rem;
+    margin: 3rem 2rem 0;
   }
 }
 
@@ -1097,7 +1101,7 @@ a {
 @media (min-width: 768px) {
   .spec__container {
     max-width: 120rem;
-    padding: 0.5rem 20rem 7.2rem;
+    padding: 0.5rem 18rem 7.2rem;
   }
 }
 
@@ -1107,7 +1111,7 @@ a {
 @media (min-width: 768px) {
   .spec__sub-container {
     margin-top: 3.4rem;
-    padding: 0 3rem;
+    padding: 0 5rem;
   }
 }
 
