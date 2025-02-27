@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /* フォントの導入 -----------------------------------------*/
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 /* コンテンツ幅以下可変レイアウト -----------------------------------------*/
 html {
   font-size: 2.5641025641vw;
