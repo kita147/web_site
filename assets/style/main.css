@@ -621,7 +621,7 @@ a {
 @media (min-width: 768px) {
   .case__container {
     max-width: 120rem;
-    padding: 6rem 1.65em 5.5rem;
+    padding: 6rem 1.7rem 5.5rem;
   }
 }
 
@@ -634,7 +634,8 @@ a {
 @media (min-width: 768px) {
   .case__card-box {
     flex-direction: row;
-    gap: 3.2rem;
+    justify-content: space-between;
+    gap: 3rem;
     padding-top: 0.8rem;
   }
 }
@@ -644,7 +645,7 @@ a {
 }
 @media (min-width: 768px) {
   .case__card {
-    width: calc((100% - 3rem) / 3);
+    width: calc((100% - 3.2rem) / 3);
   }
 }
 
