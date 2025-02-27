@@ -17,7 +17,7 @@ html {
     }
 }
 
-@media (min-width: 1030px) {
+@media (min-width: 1200px) {
     html {
         font-size: 62.5%;
     }
@@ -140,6 +140,7 @@ a {
     padding-bottom: 1.2rem;
 
     @media (min-width: 768px) {
+        border-bottom: solid 5px #ddd;
         font-size: 2.8rem;
         padding-bottom: 2.6rem;
     }
@@ -150,11 +151,12 @@ a {
     content: " ";
     display: block;
     border-bottom: solid 3px $main-green;
-    bottom: -3px;
+    bottom: calc(-1 * 3px);
     width: 14%;
 
     @media (min-width: 768px) {
         border-bottom: solid 5px $main-green;
+        bottom: calc(-1 * 5px);
         width: 12.5%;
     }
 }
@@ -421,6 +423,10 @@ a {
 }
 
 /* 私たちが選ばれる3つの理由 -----------------------------------------*/
+.features {
+    background-color: $bg-green;
+}
+
 .features__container {
     max-width: 100%;
     margin: 0 auto;

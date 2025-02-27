@@ -14,7 +14,7 @@ html {
     /* 1200はPCカンプのコンテンツ幅 */
   }
 }
-@media (min-width: 1030px) {
+@media (min-width: 1200px) {
   html {
     font-size: 62.5%;
   }
@@ -136,6 +136,7 @@ a {
 }
 @media (min-width: 768px) {
   .common-title {
+    border-bottom: solid 5px #ddd;
     font-size: 2.8rem;
     padding-bottom: 2.6rem;
   }
@@ -152,6 +153,7 @@ a {
 @media (min-width: 768px) {
   .common-title:after {
     border-bottom: solid 5px #168352;
+    bottom: -5px;
     width: 12.5%;
   }
 }
@@ -435,6 +437,10 @@ a {
 }
 
 /* 私たちが選ばれる3つの理由 -----------------------------------------*/
+.features {
+  background-color: #f3f9f6;
+}
+
 .features__container {
   max-width: 100%;
   margin: 0 auto;
