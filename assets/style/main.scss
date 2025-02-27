@@ -276,6 +276,10 @@ a {
     }
 }
 
+.header__nav-pc-active {
+    color: $main-green;
+}
+
 /* ヘッダー固定なのでmainを下げる -----------------------------------------*/
 .main {
     margin-top: 6.3rem;
