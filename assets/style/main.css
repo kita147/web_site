@@ -477,6 +477,7 @@ a {
   border-radius: 2.5rem;
   overflow: hidden;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 @media (min-width: 768px) {
   .features__card {
@@ -493,11 +494,15 @@ a {
   -o-object-position: bottom;
      object-position: bottom;
   display: block;
+  transition: 0.3s ease;
 }
 @media (min-width: 768px) {
   .features__card-image {
     height: 22.6rem;
   }
+}
+.features__card-image:hover {
+  opacity: 0.7;
 }
 
 .features__card-text {
