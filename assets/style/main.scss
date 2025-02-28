@@ -602,7 +602,7 @@ a {
 
     @media (min-width: 768px) {
         width: 13.4rem;
-        height:13.4rem;
+        height: 13.4rem;
         margin-left: 0.9rem;
     }
 }
@@ -661,7 +661,7 @@ a {
     width: 100%;
 
     @media (min-width: 768px) {
-        width: calc((100% - 3.2rem) / 3);
+        width: calc((100% - 6rem) / 3);
     }
 }
 
@@ -675,8 +675,7 @@ a {
     transition: 0.3s ease;
 
     @media (min-width: 768px) {
-        width: 36.9rem;
-        height: 22.6rem;
+        height: auto;
     }
 
     &:hover {
