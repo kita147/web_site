@@ -655,6 +655,15 @@ a {
   }
 }
 
+.products__pad-left {
+  padding-left: 1rem;
+}
+@media (min-width: 768px) {
+  .products__pad-left {
+    padding-left: 1rem;
+  }
+}
+
 /* お客様の事例紹介 -----------------------------------------*/
 .case {
   background-color: #f3f9f6;
