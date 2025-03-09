@@ -83,7 +83,7 @@ a {
 }
 
 /* 共通クラス -----------------------------------------*/
-.top__title--en {
+.top-title__en {
   font-family: "Montserrat", serif;
   font-size: 1.6rem;
   font-weight: 600;
@@ -93,13 +93,13 @@ a {
   margin-bottom: 0.8rem;
 }
 @media (min-width: 768px) {
-  .top__title--en {
+  .top-title__en {
     font-size: 2rem;
     margin-bottom: 1.6rem;
   }
 }
 
-.top__title--jp {
+.top-title__jp {
   font-size: 2rem;
   font-weight: 700;
   line-height: 1;
@@ -107,7 +107,7 @@ a {
   margin-bottom: 2.4rem;
 }
 @media (min-width: 768px) {
-  .top__title--jp {
+  .top-title__jp {
     font-size: 2.8rem;
     margin-bottom: 2.5rem;
   }
