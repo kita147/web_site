@@ -938,7 +938,6 @@ a {
 .bread-box {
     display: flex;
     justify-content: flex-end;
-    gap: 0.6rem;
     font-size: 1.2rem;
 
     @media (min-width: 768px) {
@@ -946,10 +945,28 @@ a {
     }
 }
 
-.bread__arrow {
+.bread-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+// 矢印を追加
+.bread-item::after {
+    content: "";
+    display: inline-block;
     width: 0.5rem;
     height: 1rem;
+    background-image: url("/assets/image/bread_arrow.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
     vertical-align: middle;
+    margin: 0 1rem; // 左右の余白
+}
+
+// 最後の項目には矢印を表示しない
+.bread-item:last-child::after {
+    content: none;
 }
 
 /* ギャラリー -----------------------------------------*/
