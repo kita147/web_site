@@ -485,7 +485,6 @@ a {
   border-radius: 2.5rem;
   overflow: hidden;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
-  cursor: pointer;
 }
 @media (min-width: 768px) {
   .features__card {
@@ -736,12 +735,16 @@ a {
   padding: 0.7rem 0;
   line-break: anywhere;
   letter-spacing: 0;
+  transition: 0.3s ease;
 }
 @media (min-width: 768px) {
   .case__card-text {
     font-size: 1.9rem;
     padding: 0.7rem 0;
   }
+}
+.case__card-text:hover {
+  opacity: 0.7;
 }
 
 /* お知らせ -----------------------------------------*/
@@ -821,11 +824,15 @@ a {
   font-size: 1.5rem;
   font-weight: 700;
   color: #09947b;
+  transition: 0.3s ease;
 }
 @media (min-width: 768px) {
   .news__content {
     margin-left: 2.5rem;
   }
+}
+.news__content:hover {
+  opacity: 0.7;
 }
 
 /* 「ニュース一覧へ」ボタンここから*/
