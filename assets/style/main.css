@@ -56,6 +56,10 @@ h6 {
   line-height: 1;
 }
 
+span {
+  display: inline-block;
+}
+
 img {
   width: 100%;
   height: auto;
@@ -1118,6 +1122,7 @@ a {
   padding: 0.7rem 0;
   line-break: anywhere;
   letter-spacing: 0;
+  padding-right: 0.2rem;
 }
 @media (min-width: 768px) {
   .service__card-text {
