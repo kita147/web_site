@@ -157,7 +157,7 @@ a {
 
 .common-title:after {
     position: absolute;
-    content: " ";
+    content: "";
     display: block;
     border-bottom: solid 3px $main-green;
     bottom: calc(-1 * 3px);
