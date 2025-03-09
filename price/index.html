@@ -65,21 +65,28 @@
 
         <!-- メインここから -->
         <main class="main">
-
             <!-- ヒーロービューここから -->
             <section class="hero">
                 <div class="hero__container">
-                    <div class="hero__image--price"></div>
+                    <picture>
+                        <source srcset="/assets/image/hero_price_pc.jpg" media="(min-width: 768px)">
+                        <img class="hero__image" src="/assets/image/hero_price_sp.jpg" alt="">
+                    </picture>
                     <h1 class="hero__title">価格・スペック</h1>
-                    <nav aria-label="bread">
-                        <ul class="bread-box">
-                            <li class="bread-item"><a href="/">トップ</a></li>
-                            <li class="bread-item">価格・スペック</li>
-                        </ul>
-                    </nav>
                 </div>
             </section>
-            <!-- ヒーロービューここまで-->
+            <!-- ヒーロービューここまで -->
+
+            <!-- パンくずリストここから -->
+            <div class="bread">
+                <nav>
+                    <ul class="bread-box">
+                        <li class="bread-item"><a href="/">トップ</a></li>
+                        <li class="bread-item">価格・スペック</li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- パンくずリストここまで -->
 
             <!-- ギャラリーここから -->
             <section class="gallery">

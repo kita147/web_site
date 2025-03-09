@@ -68,17 +68,25 @@
             <!-- ヒーロービューここから -->
             <section class="hero">
                 <div class="hero__container">
-                    <div class="hero__image--faq"></div>
+                    <picture>
+                        <source srcset="/assets/image/hero_faq_pc.jpg" media="(min-width: 768px)">
+                        <img class="hero__image" src="/assets/image/hero_faq_sp.jpg" alt="">
+                    </picture>
                     <h1 class="hero__title">よくあるご質問</h1>
-                    <nav aria-label="bread">
-                        <ul class="bread-box">
-                            <li class="bread-item"><a href="/">トップ</a></li>
-                            <li class="bread-item">よくあるご質問</li>
-                        </ul>
-                    </nav>
                 </div>
             </section>
-            <!-- ヒーロービューここまで-->
+            <!-- ヒーロービューここまで -->
+
+            <!-- パンくずリストここから -->
+            <div class="bread">
+                <nav>
+                    <ul class="bread-box">
+                        <li class="bread-item"><a href="/">トップ</a></li>
+                        <li class="bread-item">よくあるご質問</li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- パンくずリストここまで -->
 
             <!-- アコーディオン型QA ここから-->
             <dl class="faq__list">

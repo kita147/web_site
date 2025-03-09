@@ -27,8 +27,10 @@ html {
 $main-green: #168352;
 $bg-green: #f3f9f6;
 $pad-sp: 1.6rem;
+$pad-pc-small: 1.65rem;
+$pad-pc-large: 5rem;
 $contents-pc: 120rem;
-$news-btn-radius: 5rem;
+$news-btn-radius: 5rem; //「お知らせ」セクション内の立体ボタン
 
 /* スムーススクロール -----------------------------------------*/
 html {
@@ -905,22 +907,18 @@ a {
     margin: 0 auto;
 
     @media (min-width: 768px) {
+        position: relative;
         max-width: 124rem;
         padding: 4rem 2rem;
     }
 }
 
-.hero__image--price {
+.hero__image {
     height: 23rem;
-    background-image: url(/assets/image/hero_price_sp.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     border-radius: 2.4rem;
 
     @media (min-width: 768px) {
         height: 55rem;
-        background-image: url(/assets/image/hero_price_pc.jpg);
     }
 }
 
@@ -932,17 +930,22 @@ a {
     background-color: #fff;
 
     @media (min-width: 768px) {
+        position: absolute;
+        top: 47.5rem;
+        left: 2rem;
         font-size: 3.6rem;
         padding: 3.6rem 0 4.4rem;
         border-top-right-radius: 4rem;
-        margin-top: -11.3rem;
         width: 32.8rem;
         text-align: center;
     }
 }
 
+/* パンくずリスト -------------------*/
 .bread {
-    display: inline-block;
+    max-width: $contents-pc;
+    padding: 0 $pad-pc-small;
+    margin: 0 auto;
 }
 
 .bread-box {
@@ -1271,21 +1274,6 @@ a {
 }
 
 /* よくあるご質問のページ -----------------------------------------*/
-.hero__image--faq {
-    height: 23rem;
-    background-image: url(/assets/image/hero_faq_sp.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 2.4rem;
-
-    @media (min-width: 768px) {
-        height: 55rem;
-        background-image: url(/assets/image/hero_faq_pc.jpg);
-    }
-}
-
-/* アコーディオン型QA -----------------------------------------*/
 .faq__list {
     display: flex;
     flex-direction: column;

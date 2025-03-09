@@ -946,23 +946,19 @@ a {
 }
 @media (min-width: 768px) {
   .hero__container {
+    position: relative;
     max-width: 124rem;
     padding: 4rem 2rem;
   }
 }
 
-.hero__image--price {
+.hero__image {
   height: 23rem;
-  background-image: url(/assets/image/hero_price_sp.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   border-radius: 2.4rem;
 }
 @media (min-width: 768px) {
-  .hero__image--price {
+  .hero__image {
     height: 55rem;
-    background-image: url(/assets/image/hero_price_pc.jpg);
   }
 }
 
@@ -975,17 +971,22 @@ a {
 }
 @media (min-width: 768px) {
   .hero__title {
+    position: absolute;
+    top: 47.5rem;
+    left: 2rem;
     font-size: 3.6rem;
     padding: 3.6rem 0 4.4rem;
     border-top-right-radius: 4rem;
-    margin-top: -11.3rem;
     width: 32.8rem;
     text-align: center;
   }
 }
 
+/* パンくずリスト -------------------*/
 .bread {
-  display: inline-block;
+  max-width: 120rem;
+  padding: 0 1.65rem;
+  margin: 0 auto;
 }
 
 .bread-box {
@@ -1336,22 +1337,6 @@ a {
 }
 
 /* よくあるご質問のページ -----------------------------------------*/
-.hero__image--faq {
-  height: 23rem;
-  background-image: url(/assets/image/hero_faq_sp.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 2.4rem;
-}
-@media (min-width: 768px) {
-  .hero__image--faq {
-    height: 55rem;
-    background-image: url(/assets/image/hero_faq_pc.jpg);
-  }
-}
-
-/* アコーディオン型QA -----------------------------------------*/
 .faq__list {
   display: flex;
   flex-direction: column;
