@@ -890,7 +890,7 @@ a {
   color: #fff;
 }
 
-.footer__container {
+.footer__list {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -901,19 +901,27 @@ a {
   padding: 1.6rem;
 }
 @media (min-width: 768px) {
-  .footer__container {
+  .footer__list {
     max-width: 120rem;
     height: 9.6rem;
   }
 }
 
-.footer__line {
+.footer__item {
+  display: flex;
+  align-items: center;
+}
+
+/* 疑似要素で区切り線を作成 */
+.footer__item.footer__line::before {
+  content: "";
+  display: block;
   width: 1px;
   height: 2rem;
   background-color: #fff;
 }
 @media (min-width: 768px) {
-  .footer__line {
+  .footer__item.footer__line::before {
     height: 2.4rem;
   }
 }
