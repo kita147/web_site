@@ -181,17 +181,18 @@ a {
 }
 
 .header__container {
+    max-width: 100%;
     height: 6.3rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 $pad-sp;
+    padding: 0 $pad-pc-small;
 
     @media (min-width: 768px) {
         max-width: $contents-pc;
         height: 11.4rem;
         margin: 0 auto;
-        padding: 1.65rem;
+        padding: 0 $pad-pc-small;
     }
 }
 
@@ -270,7 +271,7 @@ a {
         justify-content: flex-end;
         font-size: 1.6rem;
         color: #000;
-        gap: 4rem;
+        gap: 3.8rem;
     }
 }
 
@@ -295,18 +296,19 @@ a {
     }
 }
 
-/* メインビジュアル -----------------------------------------*/
-.main-visual__container {
-    padding: 2rem 1.6rem 5.5rem;
+/* メインコンセプトとビジュアル -----------------------------------------*/
+.main-concept__container {
+    max-width: 100%;
+    padding: 2rem $pad-sp 0;
+    margin: 0 auto;
 
     @media (min-width: 768px) {
         max-width: $contents-pc;
-        margin: 0 auto;
-        padding: 5rem 1.65rem 6.2rem;
+        padding: 5rem $pad-pc-large 0;
     }
 }
 
-.main-visual__box {
+.main-concept__box {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -315,11 +317,11 @@ a {
 
     @media (min-width: 768px) {
         flex-direction: row;
-        gap: 13.5rem;
+        justify-content: space-between;
     }
 }
 
-.main-visual__title {
+.main-concept__title {
     font-size: 2.8rem;
     font-weight: 700;
     line-height: 1;
@@ -329,31 +331,32 @@ a {
     }
 }
 
-.main-visual__text {
+.main-concept__text {
     line-break: anywhere;
 
     @media (min-width: 768px) {
-        width: 52.5rem;
+        width: 53rem;
         font-size: 1.5rem;
+    }
+}
+
+.main-visual__container {
+    padding: 2.7rem 1.6rem 5.5rem;
+
+    @media (min-width: 768px) {
+        max-width: $contents-pc;
+        margin: 0 auto;
+        padding: 5.6rem $pad-pc-small 6.2rem;
     }
 }
 
 .main-visual__image {
     width: 100%;
     height: 45rem;
-    background-image: url(/assets/image/main_visual_sp.jpg);
-    background-size: cover;
-    background-position: center 57%;
-    background-repeat: no-repeat;
     border-radius: 4rem;
-    margin-top: 2.6rem;
 
     @media (min-width: 768px) {
         height: 55rem;
-        background-image: url(/assets/image/main_visual_pc.jpg);
-        background-position: center 57%;
-        margin-top: 5.5rem;
-        border-radius: 4rem;
     }
 }
 
@@ -380,7 +383,7 @@ a {
         align-items: flex-start;
         gap: 1.5rem;
         margin: 0 auto;
-        padding: 0.8rem 13rem 6rem 11rem;
+        padding: 0.8rem 13rem 6rem 10.5rem;
     }
 }
 
@@ -396,7 +399,7 @@ a {
     line-break: anywhere;
 
     @media (min-width: 768px) {
-        width: 40.5rem;
+        width: 42rem;
         text-align: left;
         gap: 2.5rem;
         padding: 10rem 0 0;
@@ -417,6 +420,7 @@ a {
 
     @media (min-width: 768px) {
         font-size: 1.5rem;
+        padding-left: 1.1rem;
     }
 }
 
@@ -447,7 +451,7 @@ a {
 
     @media (min-width: 768px) {
         max-width: $contents-pc;
-        padding: 6.4rem 1.65rem 6.3rem;
+        padding: 6.4rem $pad-pc-small 6.3rem;
     }
 }
 
@@ -517,7 +521,7 @@ a {
 
     @media (min-width: 768px) {
         max-width: $contents-pc;
-        padding: 6.7rem 5rem 6.7rem;
+        padding: 6.5rem $pad-pc-large 6.3rem;
     }
 }
 
@@ -533,6 +537,7 @@ a {
         flex-wrap: wrap;
         column-gap: 5rem;
         row-gap: 4rem;
+        padding-top: 0.9rem;
     }
 }
 
@@ -662,7 +667,7 @@ a {
     display: flex;
     flex-direction: column;
     width: 100%;
-    gap: 2rem;
+    gap: 1.9rem;
 
     @media (min-width: 768px) {
         flex-direction: row;
@@ -737,7 +742,7 @@ a {
 
     @media (min-width: 768px) {
         gap: 1em;
-        padding-top: 0.5rem;
+        padding-top: 0.7rem;
     }
 }
 
@@ -903,13 +908,13 @@ a {
 /* 価格・スペックのページ -----------------------------------------*/
 .hero__container {
     max-width: 100%;
-    padding: 2rem $pad-sp;
+    padding: 2rem $pad-sp 0;
     margin: 0 auto;
 
     @media (min-width: 768px) {
         position: relative;
         max-width: 124rem;
-        padding: 4rem 2rem;
+        padding: 4rem 1.8rem 1.8rem;
     }
 }
 
@@ -931,8 +936,8 @@ a {
 
     @media (min-width: 768px) {
         position: absolute;
-        top: 47.5rem;
-        left: 2rem;
+        top: 47.7rem;
+        left: 1.8rem;
         font-size: 3.6rem;
         padding: 3.6rem 0 4.4rem;
         border-top-right-radius: 4rem;
@@ -942,20 +947,21 @@ a {
 }
 
 /* パンくずリスト -------------------*/
-.bread {
-    max-width: $contents-pc;
-    padding: 0 $pad-pc-small;
+.bread__container {
+    max-width: 100%;
     margin: 0 auto;
+    padding: 0 $pad-sp 2rem;
+
+    @media (min-width: 768px) {
+        max-width: $contents-pc;
+        padding: 0 0 5.4rem;
+    }
 }
 
 .bread-box {
     display: flex;
     justify-content: flex-end;
     font-size: 1.2rem;
-
-    @media (min-width: 768px) {
-        padding: 1.5rem 0;
-    }
 }
 
 .bread-item {
@@ -974,7 +980,7 @@ a {
     background-repeat: no-repeat;
     background-size: contain;
     vertical-align: middle;
-    margin: 0 1rem; // 左右の余白
+    margin: 0 0.6rem; // 左右の余白
 }
 
 // 最後の項目には矢印を表示しない
@@ -1221,7 +1227,7 @@ a {
         width: 73%;
         border-top: 1px solid #ddd;
         border-left: none;
-        margin-left: 0.5rem;
+        padding-left: 2.3rem;
     }
 }
 
@@ -1277,14 +1283,15 @@ a {
 .faq__list {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 2.4rem;
     max-width: 100%;
     margin: 0 auto;
     padding: 1.5rem $pad-sp 17.3rem;
 
     @media (min-width: 768px) {
         max-width: $contents-pc;
-        padding: 0.4rem 20rem 8.5rem;
+        padding: 0.6rem 20rem 8.5rem;
+        gap: 2.5rem;
     }
 }
 
@@ -1304,7 +1311,7 @@ a {
     flex-direction: column;
 
     @media (min-width: 768px) {
-        padding: 2.5rem 3.1rem 1rem;
+        padding: 2rem 3.1rem 0.7rem;
     }
 }
 
@@ -1345,6 +1352,10 @@ a {
     border: solid 1px #168352;
     border-radius: 0.5rem;
     margin-right: 0.8rem;
+
+    @media (min-width: 768px) {
+        margin-top: 0.2rem;
+    }
 }
 
 /* アコーディオン開閉ボタン */
@@ -1396,12 +1407,12 @@ a {
 .faq__answer {
     display: none;
     font-size: 1.6rem;
-    padding: 0 2.4rem 1.7rem;
+    padding: 0 2.4rem 1.4rem;
     margin: -1.5rem 0 0.3rem;
+    line-break: anywhere;
 
     @media (min-width: 768px) {
-        padding: 0 3.1rem 1.7rem;
-        margin: -0.3rem 0 0.3rem;
+        padding: 1.7rem 3.1rem 1.5rem;
     }
 }
 
