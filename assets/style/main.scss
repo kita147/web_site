@@ -525,7 +525,7 @@ a {
     }
 }
 
-.products__btn-box {
+.products__btn-list {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -541,22 +541,25 @@ a {
     }
 }
 
+.products__btn-box {
+    display: flex;
+    align-items: center;
+}
+
 .products__btn-upper {
     width: 100%;
     height: 14rem;
-    display: flex;
-    align-items: center;
     background-color: $main-green;
     font-size: 1.8rem;
     font-weight: 700;
     color: #fff;
     border-radius: 2.4rem;
     padding: 2.2rem;
-    gap: 1.7rem;
     transition: background-color 0.3s ease, color 0.3s ease;
 
     @media (min-width: 768px) {
-        width: 52.5rem;
+        /*width: 52.5rem;*/
+        width: calc((100% - (5rem * 2)) / 2);
         height: 18rem;
         font-size: 2.7rem;
     }
@@ -570,19 +573,16 @@ a {
 .products__btn-lower {
     width: 100%;
     height: 14rem;
-    display: flex;
-    align-items: center;
     background-color: $main-green;
     font-size: 1.8rem;
     font-weight: 700;
     color: #fff;
     border-radius: 2.4rem;
     padding: 2.2rem;
-    gap: 1.7rem;
     transition: background-color 0.3s ease, color 0.3s ease;
 
     @media (min-width: 768px) {
-        width: 33.3rem;
+        width: calc((100% - (5rem * 3)) / 3);
         height: 15rem;
         font-size: 2rem;
     }
@@ -590,19 +590,6 @@ a {
     &:hover {
         background-color: #dffaec;
         color: $main-green;
-    }
-}
-
-.products__btn-image-lower {
-    width: 10rem;
-    height: 10rem;
-    object-fit: cover;
-    margin-left: 0.4rem;
-
-    @media (min-width: 768px) {
-        width: 11rem;
-        height: 11rem;
-        margin-left: 0.2rem;
     }
 }
 
@@ -619,19 +606,23 @@ a {
     }
 }
 
-.products__btn-text-lower {
-    font-size: 1.8rem;
-    font-weight: 700;
+.products__btn-image-lower {
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
+    margin-left: 0.4rem;
 
     @media (min-width: 768px) {
-        font-size: 2rem;
-        margin-left: 0.3rem;
+        width: 11rem;
+        height: 11rem;
+        margin-left: 0.2rem;
     }
 }
 
 .products__btn-text-upper {
     font-size: 1.8rem;
     font-weight: 700;
+    margin-left: 1.7rem;
 
     @media (min-width: 768px) {
         font-size: 2.4rem;
@@ -639,11 +630,14 @@ a {
     }
 }
 
-.products__pad-left {
-    padding-left: 1rem;
+.products__btn-text-lower {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-left: 1.7rem;
 
     @media (min-width: 768px) {
-        padding-left: 1rem;
+        font-size: 2rem;
+        margin-left: 0.3rem;
     }
 }
 
