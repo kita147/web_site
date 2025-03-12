@@ -907,8 +907,8 @@ a {
 
     @media (min-width: 768px) {
         position: relative;
-        max-width: 124rem;
-        padding: 4rem 1.8rem 1.8rem;
+        max-width: $contents-pc;
+        padding: 4rem $pad-pc-small 1.8rem;
     }
 }
 
@@ -931,7 +931,7 @@ a {
     @media (min-width: 768px) {
         position: absolute;
         top: 47.7rem;
-        left: 1.8rem;
+        left: 1.6rem;
         font-size: 3.6rem;
         padding: 3.6rem 0 4.4rem;
         border-top-right-radius: 4rem;
@@ -948,8 +948,12 @@ a {
 
     @media (min-width: 768px) {
         max-width: $contents-pc;
-        padding: 0 0 5.4rem;
+        padding: 0 $pad-pc-small 5.4rem;
     }
+}
+
+.bread__list {
+    display: block;
 }
 
 .bread-box {
